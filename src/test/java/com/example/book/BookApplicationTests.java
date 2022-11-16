@@ -13,6 +13,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.servlet.MockMvc;
 
+import com.example.book.dto.BookFilter;
 import com.example.book.model.Book;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -43,7 +44,7 @@ class BookApplicationTests {
 
 	 @Test
 	 public void gettingBooksWithCriteria() throws Exception {
-		Book book = new Book();
+		BookFilter book = new BookFilter();
 		book.setCategory("Novela");
 
 		ObjectMapper objectMapper = new ObjectMapper();

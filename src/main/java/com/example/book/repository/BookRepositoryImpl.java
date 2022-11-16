@@ -12,6 +12,7 @@ import javax.persistence.criteria.Root;
 
 import org.springframework.stereotype.Repository;
 
+import com.example.book.dto.BookFilter;
 import com.example.book.model.Book;
 
 @Repository
@@ -20,7 +21,7 @@ public class BookRepositoryImpl implements BookRepositoryCustom {
     @PersistenceContext
     private EntityManager entityManager;
 
-    public List<Book> findByCriteria(Book book) {
+    public List<Book> findByCriteria(BookFilter book) {
 
         CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
         CriteriaQuery<Book> criteriaQuery = criteriaBuilder.createQuery(Book.class);
