@@ -6,7 +6,7 @@ Run the next command
 
 ## How to run using Docker
 Run the next command
-./mvnw clean package && docker-compose up
+`./mvnw clean package && docker-compose up`
 
 ## How to test
 To test you can import the collection `BookAPI.postman_collection.json` in postman, it has two requests, one to query the endpoint `/books/byCriteria` without criteria and the second to query the endpoint with a specific category.
