@@ -1,0 +1,107 @@
+<databaseChangeLog 
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog" 
+  xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd 
+   http://www.liquibase.org/xml/ns/dbchangelog 
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    
+    <changeSet author="daniel-posada" id="1">
+        <createTable tableName="book">
+            <column autoIncrement="true" name="id" type="SERIAL">
+                <constraints primaryKey="true" primaryKeyName="book_pkey"/>
+            </column>
+            <column name="name" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="category" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="author" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="daniel-posada" id="2">
+        <insert tableName="book">
+            <column name="name" value="Cien años de soledad"></column>
+            <column name="category" value="Novela"></column>
+            <column name="author" value="Gabriel García Márquez"></column>
+        </insert>
+    </changeSet>
+
+    <changeSet author="daniel-posada" id="3">
+        <insert tableName="book">
+            <column name="name" value="Un saco de huesos"></column>
+            <column name="category" value="Terror"></column>
+            <column name="author" value="Stephen King"></column>
+        </insert>
+    </changeSet>
+
+    <changeSet author="daniel-posada" id="4">
+        <insert tableName="book">
+            <column name="name" value="Sueños de robot"></column>
+            <column name="category" value="Ciencia Ficción"></column>
+            <column name="author" value="Isaac Asimov"></column>
+        </insert>
+    </changeSet>
+
+    <changeSet author="daniel-posada" id="5">
+        <insert tableName="book">
+            <column name="name" value="El perfume"></column>
+            <column name="category" value="Misterio"></column>
+            <column name="author" value="Patrick Suskind"></column>
+        </insert>
+    </changeSet>
+
+    <changeSet author="daniel-posada" id="6">
+        <insert tableName="book">
+            <column name="name" value="El nombre de la rosa"></column>
+            <column name="category" value="Novela"></column>
+            <column name="author" value="Umberto Eco"></column>
+        </insert>
+    </changeSet>
+
+    <changeSet author="daniel-posada" id="7">
+        <insert tableName="book">
+            <column name="name" value="Doctor sueño"></column>
+            <column name="category" value="Terror"></column>
+            <column name="author" value="Stephen King"></column>
+        </insert>
+    </changeSet>
+
+    <changeSet author="daniel-posada" id="8">
+        <insert tableName="book">
+            <column name="name" value="Moby Dick"></column>
+            <column name="category" value="Aventuras"></column>
+            <column name="author" value="Hernan Melville"></column>
+        </insert>
+    </changeSet>
+
+    <changeSet author="daniel-posada" id="9">
+        <insert tableName="book">
+            <column name="name" value="La caceria"></column>
+            <column name="category" value="Terror"></column>
+            <column name="author" value="J. M. Peace"></column>
+        </insert>
+    </changeSet>
+
+    <changeSet author="daniel-posada" id="10">
+        <insert tableName="book">
+            <column name="name" value="Escrito en el agua"></column>
+            <column name="category" value="Misterio"></column>
+            <column name="author" value="Paula Hawkins"></column>
+        </insert>
+    </changeSet>
+
+    <changeSet author="daniel-posada" id="11">
+        <insert tableName="book">
+            <column name="name" value="El espejo roto"></column>
+            <column name="category" value="Misterio"></column>
+            <column name="author" value="Alina Bronsky"></column>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
